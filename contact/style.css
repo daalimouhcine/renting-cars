@@ -33,9 +33,9 @@ body {
 /* ------- styling the nave bar -------*/
 header {
     width: 100%;
-    min-height: 600px;
-    height: 120vh;
-    background: url("images/header-car.jpg") no-repeat ;
+    min-height: 400px;
+    height: 500px;
+    background: url("images/contact-bg.jpg") no-repeat ;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -86,6 +86,132 @@ header nav #nav-menu-mobil {
 }
 
 
+header .header-content {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .header-content h3, header .header-content h3 a {
+    color: #a7a7a7;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color linear 200ms;
+}
+header .header-content h3 a:hover {
+    color: var(--main-color);
+}
+header .header-content h2 {
+    color: white;
+    font-size: 60px;
+    margin-top: 8px;
+}
+
+
+
+
+
+/* ------- styling the Contact Form part -------*/
+main {
+    width: 100%;
+    background-color: #262626;
+}
+.contact-section {
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding: 100px 15px 30px;
+    margin: 0 auto;
+}
+.contact-section .title {
+    width: 100%;
+    height: fit-content;
+    margin: 50px 0;
+}
+.contact-section .title h3 {
+    font-size: 40px;
+    color: white;
+}
+.contact-section .title h5 {
+    font-size: 18px;
+    color: #a7a7a7;
+}
+
+.contact-section .contact {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.contact-section .contact .contact-info {
+    width: 30%;
+    display: flex;
+    flex-direction:column;
+}
+.contact-section .contact .contact-info>p {
+    color: #a7a7a7;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 200%;
+    margin-bottom: 30px;    
+}
+.contact-section .contact .contact-info .contact-element {
+    display: flex;
+    padding: 20px;
+    margin: 10px 0;
+}
+.contact-section .contact .contact-info .contact-element i {
+    color: var(--main-color);
+    font-size: 18px;
+    padding: 2px;
+    margin-right:30px;
+}
+.contact-section .contact .contact-info .contact-element div {
+    display: flex;
+    flex-direction: column;
+}
+.contact-section .contact .contact-info .contact-element div p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #a7a7a7;
+}
+.contact-section .contact .contact-info .contact-element div a {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-section .contact .contact-form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+.contact-section .contact .contact-form form input {
+    width: 85%;
+
+}
+.contact-section .contact .contact-form form input,.contact-section .contact .contact-form form textarea {
+    margin:0 20px 10px 0;
+    font-style: italic;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid gray;
+    padding: 15px 0px;
+}
+
+.contact-section .contact .contact-form form input:nth-child(1), .contact-section .contact .contact-form form input:nth-child(2) {
+    width: 40%;
+    margin:0 20px 10px 0;
+}
+
+.contact-section .contact .contact-form form input[type="submit"] {
+    paddin
+}
 
 
 
@@ -95,6 +221,29 @@ header nav #nav-menu-mobil {
 
 
 /* ------- styling the Footer part -------*/
+#up {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 1%;
+    right: 1%;
+    width: 70px;
+    height: 50px;
+    background-color: var(--main-color);
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 30px;
+    transition: font-size linear 200ms;
+}
+#up:hover {
+    font-size: 40px;
+}
+#up a {
+    color: white;
+}
+
 footer {
     width: 100%;
     min-height: 500px;
