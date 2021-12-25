@@ -120,12 +120,12 @@ main {
     background-color: #262626;
 }
 .contact-section {
-    width: 90%;
+    width: 95%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    padding: 100px 15px 30px;
+    padding: 100px 15px 100px;
     margin: 0 auto;
 }
 .contact-section .title {
@@ -148,7 +148,7 @@ main {
     flex-direction: row;
 }
 .contact-section .contact .contact-info {
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction:column;
 }
@@ -189,33 +189,60 @@ main {
     width: 70%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding: 0 30px;
 }
+.contact-section .contact .contact-form form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+}
 .contact-section .contact .contact-form form input {
-    width: 85%;
+    width: 100%;
+}
+.contact-section .contact .contact-form form input::placeholder, .contact-section .contact .contact-form form textarea::placeholder {
+    color: #a7a7a7;
+    font-style: italic;
 
 }
+
 .contact-section .contact .contact-form form input,.contact-section .contact .contact-form form textarea {
+    width: 100%;
     margin:0 20px 10px 0;
-    font-style: italic;
+    font-size: 14px;
+    color:white;
     background-color: transparent;
     border: 0;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #a7a7a7;
     padding: 15px 0px;
+    outline: none;
 }
-
-.contact-section .contact .contact-form form input:nth-child(1), .contact-section .contact .contact-form form input:nth-child(2) {
-    width: 40%;
+.contact-section .contact .contact-form form div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contact-section .contact .contact-form form div input {
+    width: 44%;
     margin:0 20px 10px 0;
+    outline: none;
 }
 
 .contact-section .contact .contact-form form input[type="submit"] {
-    paddin
+    width: 200px;
+    border: 2px solid var(--main-color);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition:box-shadow linear 200ms;
 }
 
-
-
-
+.contact-section .contact .contact-form form input[type="submit"]:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--main-color);
+}
 
 
 
@@ -374,8 +401,15 @@ footer .footer-rights div i:hover {
 @media screen and (max-width:1320px) {
 
 }
-@media screen and (max-width:1000px) {
-    
+@media screen and (max-width:900px) {
+    .contact-section .contact .contact-form {
+        width: 80%;
+        padding: 0 10px;
+    }
+    .contact-section .contact .contact-form form input[type="submit"] {
+        width: 140px;
+        font-size: 12px;   
+    }
 }
 @media screen and (max-width:768px) {
     header nav .nav-menu {
@@ -384,6 +418,34 @@ footer .footer-rights div i:hover {
     header nav #logo {
         height: 90px;
         width: 180px;
+    }
+    header .header-content h2 {
+        font-size: 45px;
+    }
+
+
+    .contact-section .title h3 {
+        font-size: 30px;
+    }
+    .contact-section .title h5 {
+        font-size: 16px;
+    }
+    
+    .contact-section .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-section .contact .contact-info {
+        width: 80%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    .contact-section .contact .contact-form {
+        margin-top: 50px;
+    }
+    .contact-section .contact .contact-form form input[type="submit"] {
+        align-self: center;   
     }
   
 }
@@ -441,8 +503,15 @@ footer .footer-rights div i:hover {
     }
     
 }
-@media screen and (max-width:540px) {
-   
+@media screen and (max-width:500px) {
+    .contact-section .contact .contact-form form div {
+        flex-direction: column;
+    }
+    .contact-section .contact .contact-form form div input {
+        width: 100%;
+        margin-top: 10px;
+        
+    }
 }
 
 
@@ -467,6 +536,22 @@ footer .footer-rights div i:hover {
     header nav #nav-menu-mobil .nav-item a {
         font-size: 12px;
     } 
+
+    
+        
+    .contact-section .contact .contact-info {
+        width: 90%;
+    }
+    .contact-section .contact .contact-info>p {
+        color: #a7a7a7;
+        font-size: 12px;  
+    }
+    .contact-section .contact .contact-info .contact-element {
+        padding: 5px;
+    }
+    .contact-section .contact .contact-info .contact-element div a {
+        font-size: 14px;
+    }
 
 }
 
