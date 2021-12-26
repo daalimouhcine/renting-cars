@@ -83,19 +83,20 @@
                 <div class="contact-form">
                     <form action="">
                         <div>
-                            <input type="text" placeholder="Enter your Name">
-                            <input type="email" placeholder="Enter your Email">
+                            <input type="text" placeholder="Enter your Name" id="name" required>
+                            <input type="email" placeholder="Enter your Email" id="email" required>
                         </div>
                         <br>
-                        <input type="text" placeholder="Enter your Subject">
+                        <input type="text" placeholder="Enter your Subject" id="subject" required>
                         <br>
-                        <textarea name="message" id="message" placeholder="Enter your Message" cols="100"  rows="10"></textarea>
+                        <textarea name="message" id="message" placeholder="Enter your Message" cols="100"  rows="10" required></textarea>
                         <br>
-                        <input type="submit" value="SEND MESSAGE">
+                        <input type="submit" value="SEND MESSAGE" onclick="alertContact()">
                     </form>
                 </div>
             </div>
         </section>
+        <div class="alert">the input is not correct Please check your information and submit again.</div>
     </main>
 
 
