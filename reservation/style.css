@@ -114,7 +114,11 @@ header .header-content h2 {
 
 
 /* ------- styling the reservation part -------*/
-
+main {
+    width: 100%;
+    background-color:#262626;
+    text-align:center;
+}
 
 
 
