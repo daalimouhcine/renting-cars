@@ -30,7 +30,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 main {
-    background: url("images/testimonials.jpg") no-repeat fixed;
+    background: url("images/testimonials.jpg") center no-repeat fixed;
 
 }
 /* ------- styling the nave bar -------*/
@@ -38,7 +38,7 @@ header {
     width: 100%;
     min-height: 600px;
     height: 120vh;
-    background: url("images/header-car.jpg") no-repeat ;
+    background: url("images/header-car.jpg") center no-repeat ;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -885,6 +885,10 @@ footer .footer-rights div i:hover {
         height: 170px;
         margin-bottom: -200px;
     }
+    .info .info-container {
+        min-width: 200px;
+    }
+
     .testimonials h3 {
         font-size: 20px;
     }
@@ -952,6 +956,20 @@ footer .footer-rights div i:hover {
     footer .footer-rights {
         text-align: center;
         flex-direction: column;
+    }
+}
+@media screen and (max-width:350px) {
+    .info .info-image div::before {
+        content: "";
+        width: 170px;
+        height: 290px;
+        top: -60%;
+        right: -10%;
+    }
+    .info .info-image img {
+        width: 300px;
+        height: 130px;
+        margin-bottom: -150px;
     }
 }
 
