@@ -1,32 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RentMeNow | Gallerie</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RentMeNow | Gallerie</title>
 
-    <meta property="og:site_name" content="RentMeNow">
-    <meta property="og:title" content="Company specialist in cars ranting | Contact Page | RentMeNow">
-    <meta property="og:description" content="A website for contacting the RentMeNow company which is a specialist in cars ranting.">
-    <meta property="og:type" content="Contact website">
-    <meta property="og:image" content="../images/logo.png">
-    <meta property="og:url" content="https://rentmenow.netlify.app/gallery/">
+        <meta property="og:site_name" content="RentMeNow">
+        <meta property="og:title" content="Company specialist in cars ranting | Contact Page | RentMeNow">
+        <meta property="og:description" content="A website for contacting the RentMeNow company which is a specialist in cars ranting.">
+        <meta property="og:type" content="Contact website">
+        <meta property="og:image" content="../images/logo.png">
+        <meta property="og:url" content="https://rentmenow.netlify.app/gallery/">
 
-    <link rel="shortcut icon" href="../images/logo.png">
+        <link rel="shortcut icon" href="../images/logo.png">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Open+Sans:wght@300;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/52c3d542f8.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Open+Sans:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/52c3d542f8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../">Home</a></li>
+                    <li class="nav-item nav-focus"><a href="#">Gallery</a></li>
+                </ul>
+                
+                <a href="../"><img id="logo" src="../images/logo.png" alt="Rent Me Now Logo"></a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../reservation/">Reservation</a></li>
+                    <li class="nav-item"><a href="../contact/">Contact</a></li>
+                </ul>
+                <i class="fas fa-bars" onclick="mobilMenu()" title="humburger menu icon"></i>
+                <ul id="nav-menu-mobil">
+                    <li class="nav-item"><a href="../">Accueil</a></li>
+                    <li class="nav-item"><a href="#">Gallery</a></li>
+                    <li class="nav-item"><a href="../reservation/">Reservation</a></li>
+                    <li class="nav-item nav-focus"><a href="../contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <h3><a href="../">HOME</a> / GALLERY</h3>
+                <h2>CONTACT</h2>
+            </div>
+        </header>
 
+        <main>
+            <section class="car-parti">
+                <img src="../images/wings.png" alt="wings image">
+                <h2>cars</h2>
+                <div class="car-gallery">
+                    <img src="images/cars/c1.jpg" alt="">
+                    <img src="images/cars/c2.jpg" alt="">
+                    <img src="images/cars/c3.jpg" alt="">
+                    <img src="images/cars/c4.jpg" alt="">
+                    <img src="images/cars/c5.jpg" alt="">
+                    <img src="images/cars/c6.jpg" alt="">
+                    <img src="images/cars/c7.jpg" alt="">
+                    <img src="images/cars/c8.jpg" alt="">
+                    <img src="images/cars/c9.jpg" alt="">
+                    <img src="images/cars/c10.jpg" alt="">
+                    <img src="images/cars/c11.jpg" alt="">
+                    <img src="images/cars/c12.jpg" alt="">
+                    <img src="images/cars/c13.jpg" alt="">
+                    <img src="images/cars/c14.jpg" alt="">
+                    <img src="images/cars/c15.jpg" alt="">
+                </div>
+            </section>
+            <section class="motorcycle-parti">
+                <img src="../images/wings.png" alt="wings image">
+                <h2>motorcycles</h2>
+                <div class="cotorcycle-gallery">
+                    <img src="images/motorcycles/m1.jpg" alt="">
+                    <img src="images/motorcycles/m2.jpg" alt="">
+                    <img src="images/motorcycles/m3.jpg" alt="">
+                    <img src="images/motorcycles/m4.jpg" alt="">
+                    <img src="images/motorcycles/m5.jpg" alt="">
+                    <img src="images/motorcycles/m6.jpg" alt="">
+                    <img src="images/motorcycles/m7.jpg" alt="">
+                    <img src="images/motorcycles/m8.jpg" alt="">
+                    <img src="images/motorcycles/m9.jpg" alt="">
+                    <img src="images/motorcycles/m10.jpg" alt="">
+                    <img src="images/motorcycles/m11.jpg" alt="">
+                    <img src="images/motorcycles/m12.jpg" alt="">
+                    <img src="images/motorcycles/m13.jpg" alt="">
+                </div>
+            </section>
+            <section class="truck-parti">
+                <img src="../images/wings.png" alt="wings image">
+                <h2>trucks</h2>
+                <div class="truck-gallery">
+                    <img src="images/trucks/t1.jpg" alt="">
+                    <img src="images/trucks/t2.jpg" alt="">
+                    <img src="images/trucks/t3.jpg" alt="">
+                    <img src="images/trucks/t4.jpg" alt="">
+                    <img src="images/trucks/t5.jpg" alt="">
+                    <img src="images/trucks/t6.jpg" alt="">
+                    <img src="images/trucks/t7.jpg" alt="">
+                    <img src="images/trucks/t8.jpg" alt="">
+                    <img src="images/trucks/t9.jpg" alt="">
+                    <img src="images/trucks/t10.jpg" alt="">
+                    <img src="images/trucks/t11.jpg" alt="">
+                    <img src="images/trucks/t12.jpg" alt="">
+                    <img src="images/trucks/t13.jpg" alt="">
+                </div>
+            </section>
+            <section class="construction-parti">
+                <img src="../images/wings.png" alt="wings image">
+                <h2>constructions machines</h2>
+                <div class="truck-gallery">
+                    <img src="images/construction-machins/cm1.jpg" alt="">
+                    <img src="images/construction-machins/cm2.jpg" alt="">
+                    <img src="images/construction-machins/cm3.jpg" alt="">
+                    <img src="images/construction-machins/cm4.jpg" alt="">
+                    <img src="images/construction-machins/cm5.jpg" alt="">
+                    <img src="images/construction-machins/cm6.jpg" alt="">
+                    <img src="images/construction-machins/cm7.jpg" alt="">
+                    <img src="images/construction-machins/cm8.jpg" alt="">
+                    <img src="images/construction-machins/cm9.jpg" alt="">
+                    <img src="images/construction-machins/cm10.jpg" alt="">
+                    <img src="images/construction-machins/cm11.jpg" alt="">
+                    <img src="images/construction-machins/cm12.jpg" alt="">
+                    <img src="images/construction-machins/cm13.jpg" alt="">
+                    <img src="images/construction-machins/cm14.jpg" alt="">
+                    <img src="images/construction-machins/cm7.jpg" alt="">
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div id="up">
+                <a href="#logo"><i class="fas fa-angle-up" title="angle up icon"></i></a>
+            </div>
+            <div class="footer-links">
+                <div class="letter">
+                    <h6>NEWSLETTER</h6>
+                    <form action="">
+                        <input type="email" name="email" id="email" placeholder="Enter your e-mail adress">
+                        <input type="submit" value="SUBSCRIBE">
+                    </form>
+                </div>
+                <div class="links">
+                    <h6>USEFUL LINKS</h6>
+                    <ul>
+                        <div>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="../reservation/">Services</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </div>
+                        <div>
+                            <li><a href="#">Staff</a></li>
+                            <li><a href="#">Booking</a></li>
+                            <li><a href="../reservation/">Pricing</a></li>
+                            <li><a href="../contact/">Contacts</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-rights">
+                <p>&copy; RentMeNow 2021 | Created With <i class="fa fa-heart-o highlight" title="highlight heart icon"></i> by <span>Mouhcine Daali</span></p>
+                <div>
+                    <i class="fab fa-skype" title="skype icon"></i>
+                    <i class="fab fa-linkedin-in" title="linkedin icon"></i>
+                    <i class="fab fa-facebook-f" title="facebook icon"></i>
+                    <i class="fab fa-instagram" title="instagram icon"></i>
+                </div>
+            </div>
+        </footer>
 
-
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
