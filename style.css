@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline-color: var(--main-color);
 }
 li {
     list-style-type: none;
@@ -64,9 +65,14 @@ header nav .nav-menu .nav-item {
     margin: 0 10px;
     transition: border-bottom linear 200ms;
 }  
-header nav .nav-menu .nav-item:hover, header nav .nav-menu .nav-item:focus, header nav .nav-menu .nav-focus {
+header nav .nav-menu .nav-item:hover, 
+header nav .nav-menu .nav-item:focus,
+header nav .nav-menu .nav-focus,
+header nav #nav-menu-mobil .nav-item:hover,
+header nav #nav-menu-mobil .nav-item:focus,
+header nav #nav-menu-mobil .nav-focus {
     border-bottom: 3px solid var(--main-color);
-}
+} 
 header nav .nav-menu .nav-item a {
     color: white;
     font-weight: 600;
@@ -588,17 +594,21 @@ footer .footer-links .letter form input {
     width: fit-content;
     background-color: transparent;
 }
+footer .footer-links .letter form input[type="email"]::placeholder {
+    color: gray;
+    font-style: italic;
+
+}
 footer .footer-links .letter form input[type="email"] {
     font-size: 16px;
-    font-style: italic;
+    color: white;
     width: 100%;
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 1px solid gray;
-    color: gray;
     margin: 10px 0;
-    padding: 10px 10px 10px 0;
+    padding: 10px 10px 10px 5px;
     outline: none;
 }
 footer .footer-links .letter form input[type="submit"] {

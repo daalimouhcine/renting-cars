@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline-color: var(--main-color);
 }
 li {
     list-style-type: none;
@@ -61,7 +62,12 @@ header nav .nav-menu .nav-item {
     margin: 0 10px;
     transition: border-bottom linear 200ms;
 }  
-header nav .nav-menu .nav-item:hover, header nav .nav-menu .nav-item:focus, header nav .nav-menu .nav-focus {
+header nav .nav-menu .nav-item:hover, 
+header nav .nav-menu .nav-item:focus,
+header nav .nav-menu .nav-focus,
+header nav #nav-menu-mobil .nav-item:hover,
+header nav #nav-menu-mobil .nav-item:focus,
+header nav #nav-menu-mobil .nav-focus {
     border-bottom: 3px solid var(--main-color);
 }  
 header nav .nav-menu .nav-item a {
@@ -118,6 +124,87 @@ main {
     width: 100%;
     background-color:#262626;
     text-align:center;
+}
+
+main section>img {
+    width: 67px;
+    height: 12px;
+    margin: 50px 0 10px;
+}
+main section h2 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 40px;
+}
+main section .form-information {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+main section .form-information img {
+    width: 40%;
+    height: fit-content;
+    align-self: center;
+}
+main section .form-information form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.re-steps {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(131, 131, 131);
+    border: 3px solid rgb(131, 131, 131);
+    border-radius: 100px;
+    margin:0;
+    transition: color linear 300ms, border-color linear 200ms;
+}
+.on-re-steps {
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
+}
+main section .form-information form div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+main section .form-information form div label:nth-child(2) {
+    align-self: center;
+    color: white;
+}
+main section .form-information form div select, main section .form-information form div input {
+    width:150px;
+    padding: 8px 5px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid var(--main-color);
+    border-radius: 2px;
+}
+main section .form-information form div select option {
+    background-color: var(--main-color);
+}
+main section .form-information form #submit {
+    width: fit-content;
+    align-self: center;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    margin: 30px 0;
+    padding: 10px 30px;
+    border:3px solid var(--main-color);
+    cursor: pointer;
+    transition: box-shadow linear 200ms;
+}
+main section .form-information form #submit:hover, main section .form-information form #submit:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--main-color);
 }
 
 
@@ -196,17 +283,21 @@ footer .footer-links .letter form input {
     width: fit-content;
     background-color: transparent;
 }
+footer .footer-links .letter form input[type="email"]::placeholder {
+    color: gray;
+    font-style: italic;
+
+}
 footer .footer-links .letter form input[type="email"] {
     font-size: 16px;
-    font-style: italic;
+    color: white;
     width: 100%;
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 1px solid gray;
-    color: gray;
     margin: 10px 0;
-    padding: 10px 10px 10px 0;
+    padding: 10px 10px 10px 5px;
     outline: none;
 }
 footer .footer-links .letter form input[type="submit"] {
@@ -274,7 +365,16 @@ footer .footer-rights div i:hover {
 
 
 
-
+@media screen and (max-width:1100px) {
+    main section .form-information form {
+        width: 40%;
+    }
+}
+@media screen and (max-width:800px) {
+    main section .form-information form {
+        width: 50%;
+    }
+}
 @media screen and (max-width:768px) {
     header nav .nav-menu {
         margin: 0 30px;
@@ -285,6 +385,11 @@ footer .footer-rights div i:hover {
     }
     header .header-content h2 {
         font-size: 45px;
+    }
+
+
+    main section h2 {
+        font-size: 35px;
     }
   
 }
@@ -341,8 +446,38 @@ footer .footer-rights div i:hover {
         font-weight: 600;
     }
 
+
+    main section h2 {
+        font-size: 30px;
+    }
+    main section .form-information {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 50px 0;
+    }
+    main section .form-information img {
+        width: 70%;
+        margin-top: 20px;
+    }
+    main section .form-information form {
+        width: 60%;
+        margin-top: 50px;
+    }
+    main section .form-information form #submit {
+        font-size: 17px;
+        padding: 10px 25px;
+    }
+
 }
 
+@media screen and (max-width:550px) {
+    main section .form-information form {
+        width: 90%;
+    }
+}
 
 
 @media screen and (max-width:440px) {
@@ -366,6 +501,14 @@ footer .footer-rights div i:hover {
     header nav #nav-menu-mobil .nav-item a {
         font-size: 12px;
     } 
+    header .header-content h2 {
+        font-size: 35px;
+    }
+
+
+    main section h2 {
+        font-size: 25px;
+    }
 
 }
 

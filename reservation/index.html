@@ -50,12 +50,57 @@
         </header>
 
         <main>
-            <section class="re-form">
+            <section>
                 <img src="../images/wings.png" alt="wings image">
                 <h2>Reservation</h2>
-                <form action="">
+                <div class="form-information">
+                    <img src="images/info-car.png" alt="">
+                    <form action="">
+                        <div>
+                            <label class="re-steps on-re-steps" for="gearboxes">1</label>
+                            <label for="gearboxes">Gearboxes</label>
+                            <select name="gearboxes" id="gearboxes">
+                                <option value="none">--Choose--</option>
+                                <option value="manual">Manual</option>
+                                <option value="automatique">Automatique</option>
+                            </select>
+                        </div>
 
-                </form>
+                        <div>
+                            <label class="re-steps" for="type">2</label>
+                            <label for="type">Type</label>
+                            <select name="type" id="type">
+                                <option value="none">--Choose--</option>
+                                <option value="moto">Moto</option>
+                                <option value="citadine">Citadine</option>
+                                <option value="compact">Compact</option>
+                                <option value="berline">Berline</option>
+                                <option value="utilitaire">Utilitaire</option>
+                                <option value="engin de chantier">Engin de Chantier</option>
+                                <option value="camion">Camion</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="re-steps" for="fuel">3</label>
+                            <label for="fuel">Fuel</label>
+                            <select name="fuel" id="fuel">
+                                <option value="none">--Choose--</option>
+                                <option value="electric">Electric</option>
+                                <option value="hybrid">Hybrid</option>
+                                <option value="gasoline">Gasoline</option>
+                                <option value="diesel">Diesel</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="re-steps" for="days">4</label>
+                            <label for="days">Number of Days</label>
+                            <input type="number" name="days" id="days">
+                        </div>
+                        <input type="submit" id="submit" value="Submite">
+                    </form>
+                </div>
             </section>
         </main>
         
