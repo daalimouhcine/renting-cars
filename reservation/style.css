@@ -144,12 +144,12 @@ main section .form-information {
     padding: 50px 0;
 }
 main section .form-information img {
-    width: 40%;
+    width: 35%;
     height: fit-content;
     align-self: center;
 }
 main section .form-information form {
-    width: 30%;
+    width: 35%;
     display: flex;
     flex-direction: column;
 }
@@ -187,6 +187,7 @@ main section .form-information form div select, main section .form-information f
     color: white;
     border: 3px solid var(--main-color);
     border-radius: 2px;
+    cursor: pointer;
 }
 main section .form-information form div select option {
     background-color: var(--main-color);
@@ -391,6 +392,7 @@ footer .footer-rights div i:hover {
     main section h2 {
         font-size: 35px;
     }
+
   
 }
 
