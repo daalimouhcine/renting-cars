@@ -3,12 +3,18 @@ let mobilMenu = () => {
     document.querySelector("nav").classList.toggle("menu-on");
 }
 
+// scroll to top script
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+}
+
 
 // booking script
     // variables of the select tags 
-let gearBoxes = document.querySelector("#gearboxes"),
-    type = document.querySelector("#type"),
-    fuel = document.querySelector("#fuel"),
+let form = document.querySelector("form"),
     days = document.querySelector("#days"),
     submit = document.querySelector("#submit");
 
@@ -25,72 +31,74 @@ let electric = ["Moto", "Citadine"],
     diesel = ["Citadine", "Compact", "Berline", "Utilitaire", "Engin de Chantier", "Camion"];
 
 
-
 // if the user select one of the element on the gearBoxes select this script well start working
-gearBoxes.addEventListener("change",() => {
-    if(gearBoxes.value == "manual") {
+form.gearboxes.addEventListener("change",() => {
+    days.value = "";
+    if(form.gearboxes.value == "manual") {
         document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
-        type.innerHTML = `<option value="none">--Choose--</option>`;
+        form.type.innerHTML = `<option value="none">--Choose--</option>`;
         mType.forEach(m => {
-            type.innerHTML += `<option value="${m}">${m}</option>`;
+            form.type.innerHTML += `<option value="${m}">${m}</option>`;
         });
 
-    } else if(gearBoxes.value == "automatique") {
+    } else if(form.gearboxes.value == "automatique") {
         document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
-        type.innerHTML = `<option value="none">--Choose--</option>`;
+        form.type.innerHTML = `<option value="none">--Choose--</option>`;
         aType.forEach(a => {
-            type.innerHTML += `<option value="${a}">${a}</option>`;
+            form.type.innerHTML += `<option value="${a}">${a}</option>`;
         });
 
-    } else if(gearBoxes.value == "other") {
+    } else if(form.gearboxes.value == "other") {
         document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
-        type.innerHTML = `<option value="none">--Choose--</option>`;
-        type.innerHTML += `<option value="${oType}">${oType}</option>`;
+        form.type.innerHTML = `<option value="none">--Choose--</option>`;
+        form.type.innerHTML += `<option value="${oType}">${oType}</option>`;
 
     } else {
         document.querySelectorAll(".re-steps")[1].classList.remove("on-re-steps");
         document.querySelectorAll(".re-steps")[2].classList.remove("on-re-steps");
         document.querySelectorAll(".re-steps")[3].classList.remove("on-re-steps");
-        type.innerHTML = `<option value="none">--Choose--</option>`;
-        fuel.innerHTML = `<option value="none">--Choose--</option>`;
+        form.type.innerHTML = `<option value="none">--Choose--</option>`;
+        form.fuel.innerHTML = `<option value="none">--Choose--</option>`;
     }
 });
 
 
 
 // if the user select one of the element on the types select this script well continue working
-type.addEventListener("change",() => {
-    fuel.innerHTML = `<option value="none">--Choose--</option>`;
-    if (electric.includes(type.value)) {
+form.type.addEventListener("change",() => {
+    form.fuel.innerHTML = `<option value="none">--Choose--</option>`;
+    days.value = "";
+    if (electric.includes(form.type.value)) {
         document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
-        fuel.innerHTML += `<option value="Electric">Electric</option>`;
+        form.fuel.innerHTML += `<option value="Electric">Electric</option>`;
 
     }
-    if (hybrid.includes(type.value)) {
+    if (hybrid.includes(form.type.value)) {
         document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
-        fuel.innerHTML += `<option value="Hybrid">Hybrid</option>`;
+        form.fuel.innerHTML += `<option value="Hybrid">Hybrid</option>`;
 
     }
-    if (gasoline.includes(type.value)) {
+    if (gasoline.includes(form.type.value)) {
         document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
-        fuel.innerHTML += `<option value="Gasoline">Gasoline</option>`;
+        form.fuel.innerHTML += `<option value="Gasoline">Gasoline</option>`;
 
     } 
-    if (diesel.includes(type.value)) {
+    if (diesel.includes(form.type.value)) {
         document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
-        fuel.innerHTML += `<option value="Diesel">Diesel</option>`;
+        form.fuel.innerHTML += `<option value="Diesel">Diesel</option>`;
 
     }
-    if (type.value == "none") {
+    if (form.type.value == "none") {
         document.querySelectorAll(".re-steps")[2].classList.remove("on-re-steps");
-        fuel.innerHTML = `<option value="none">--Choose--</option>`;
+        form.fuel.innerHTML = `<option value="none">--Choose--</option>`;
     }
 });
 
 
 // if the user select one of the element on the fuel select this script well continue working
-fuel.addEventListener("change", () => {
-    if (fuel.value !== "none") {
+form.fuel.addEventListener("change", () => {
+    days.value = "";
+    if (form.fuel.value !== "none") {
         document.querySelectorAll(".re-steps")[3].classList.add("on-re-steps");
         days.focus();
 
@@ -108,7 +116,7 @@ submit.addEventListener("click", (e) => {
         typePris = 0,
         fuelPris = 0;
 
-    switch (type.value) {
+    switch (form.type.value) {
         case "Moto":
             typePris = 10;
             break;
@@ -132,7 +140,7 @@ submit.addEventListener("click", (e) => {
             break;
     }
 
-    switch (fuel.value) {
+    switch (form.fuel.value) {
         case "Electric":
             fuelPris = 1.05;
             break;
@@ -148,7 +156,7 @@ submit.addEventListener("click", (e) => {
     }
     
     // store the prise on the result variable depending on the gearBoxes.
-    if(gearBoxes.value = "automatique") {
+    if(form.gearboxes.value == "automatique") {
         result = (typePris * days.value) * fuelPris * 1.19;
     } else {
         result = (typePris * days.value) * fuelPris;

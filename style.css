@@ -32,7 +32,6 @@ body {
 }
 main {
     background: url("images/testimonials.jpg") center no-repeat fixed;
-
 }
 /* ------- styling the nave bar -------*/
 header {
@@ -298,6 +297,7 @@ header .header-content .head-button a {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.829);
+    backdrop-filter: blur(10px);
     padding: 50px 0;
 }
 .testimonials img {

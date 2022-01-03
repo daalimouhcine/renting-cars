@@ -143,11 +143,6 @@ main section .form-information {
     justify-content: space-evenly;
     padding: 50px 0;
 }
-main section .form-information img {
-    width: 35%;
-    height: fit-content;
-    align-self: center;
-}
 main section .form-information form {
     width: 35%;
     display: flex;
@@ -206,6 +201,17 @@ main section .form-information form #submit {
 }
 main section .form-information form #submit:hover, main section .form-information form #submit:focus {
     box-shadow: 0 0.5em 0.5em -0.4em var(--main-color);
+}
+main section .form-information .bo-img {
+    width: 35%;
+    height: 300px;
+    align-self: center;
+    background:url("images/logo.png") center no-repeat;
+    background-size: contain;
+    margin-top: -100px;
+}
+main section .form-information img {
+
 }
 
 

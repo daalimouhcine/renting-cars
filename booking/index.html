@@ -54,12 +54,11 @@
                 <img src="../images/wings.png" alt="wings image">
                 <h2>Reservation</h2>
                 <div class="form-information">
-                    <img src="images/info-car.png" alt="">
-                    <form action="">
+                    <form>
                         <div>
                             <label class="re-steps on-re-steps" for="gearboxes">1</label>
                             <label for="gearboxes">Gearboxes</label>
-                            <select name="gearboxes" id="gearboxes">
+                            <select name="gearboxes">
                                 <option value="none">--Choose--</option>
                                 <option value="manual">Manual</option>
                                 <option value="automatique">Automatique</option>
@@ -70,7 +69,7 @@
                         <div>
                             <label class="re-steps" for="type">2</label>
                             <label for="type">Type</label>
-                            <select name="type" id="type">
+                            <select name="type">
                                 <option value="none">--Choose--</option>
 
                             </select>
@@ -79,7 +78,7 @@
                         <div>
                             <label class="re-steps" for="fuel">3</label>
                             <label for="fuel">Fuel</label>
-                            <select name="fuel" id="fuel">
+                            <select name="fuel">
                                 <option value="none">--Choose--</option>
                             </select>
                         </div>
@@ -91,13 +90,16 @@
                         </div>
                         <input type="submit" id="submit" value="Submite">
                     </form>
+                    <div class="bo-img">
+                        
+                    </div>
                 </div>
             </section>
         </main>
         
         <footer>
-            <div id="up">
-                <a href="#logo"><i class="fas fa-angle-up" title="angle up icon"></i></a>
+            <div id="up" onclick="scrollToTop()">
+                <i class="fas fa-angle-up" title="angle up icon"></i>
             </div>
             <div class="footer-links">
                 <div class="letter">
