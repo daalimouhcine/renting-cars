@@ -34,6 +34,7 @@ let electric = ["Moto", "Citadine"],
 // if the user select one of the element on the gearBoxes select this script well start working
 form.gearboxes.addEventListener("change",() => {
     days.value = "";
+    form.fuel.innerHTML = `<option value="none">--Choose--</option>`;
     if(form.gearboxes.value == "manual") {
         document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
         form.type.innerHTML = `<option value="none">--Choose--</option>`;
@@ -163,5 +164,5 @@ submit.addEventListener("click", (e) => {
     }
 
     // display the result.
-    window.alert(result + "$");
+    Swal.fire(Math.trunc(result) + "€");
 })
