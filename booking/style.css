@@ -140,6 +140,7 @@ main section .form-information {
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
     padding: 50px 0;
 }
@@ -202,16 +203,24 @@ main section .form-information form #submit {
 main section .form-information form #submit:hover, main section .form-information form #submit:focus {
     box-shadow: 0 0.5em 0.5em -0.4em var(--main-color);
 }
-main section .form-information .bo-img {
-    width: 35%;
-    height: 300px;
-    align-self: center;
-    background:url("images/logo.png") center no-repeat;
-    background-size: contain;
-    margin-top: -100px;
-}
-main section .form-information img {
 
+main section .info-table table {
+    background-size: contain;
+    background-color: var(--main-color);
+    margin: 0 20px;
+}
+main section .info-table table tr {
+    background-color: #262626;
+}
+main section .info-table table tr th {
+    border: 1px solid var(--main-color);
+    background-color: rgb(214, 214, 214);
+    padding: 8px 5px;
+}
+main section .info-table table tr td{
+    color: white;
+    border: 1px solid var(--main-color);
+    padding: 10px 15px;
 }
 
 
@@ -372,9 +381,13 @@ footer .footer-rights div i:hover {
 
 
 
-@media screen and (max-width:1100px) {
+@media screen and (max-width:1200px) {
+    main section .form-information {
+        flex-direction: column-reverse;
+    }
     main section .form-information form {
         width: 40%;
+        margin-top: 50px;
     }
 }
 @media screen and (max-width:800px) {
@@ -399,7 +412,12 @@ footer .footer-rights div i:hover {
         font-size: 35px;
     }
 
-  
+    main section .info-table table tr th {
+        padding: 8px 5px;
+    }
+    main section .info-table table tr td{
+        padding: 8px 11px;
+    }
 }
 
 @media screen and (max-width:630px) {
@@ -461,9 +479,6 @@ footer .footer-rights div i:hover {
     main section .form-information {
         width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
         padding: 50px 0;
     }
     main section .form-information img {
@@ -472,7 +487,6 @@ footer .footer-rights div i:hover {
     }
     main section .form-information form {
         width: 60%;
-        margin-top: 50px;
     }
     main section .form-information form #submit {
         font-size: 17px;
@@ -481,12 +495,18 @@ footer .footer-rights div i:hover {
 
 }
 
+
 @media screen and (max-width:550px) {
     main section .form-information form {
         width: 90%;
     }
+    main section .info-table table tr th {
+        padding: 5px 3px;
+    }
+    main section .info-table table tr td{
+        padding: 5px 8px;
+    }
 }
-
 
 @media screen and (max-width:440px) {
     header nav #nav-menu-mobil {
@@ -514,8 +534,16 @@ footer .footer-rights div i:hover {
     }
 
 
+    font-size: 25px;
     main section h2 {
-        font-size: 25px;
+    }
+
+
+    main section .info-table table tr th {
+        padding: 1px 2px;
+    }
+    main section .info-table table tr td{
+        padding: 2px 4px;
     }
 
 }

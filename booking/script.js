@@ -43,7 +43,7 @@ form.gearboxes.addEventListener("change",() => {
 
     } else if(form.gearboxes.value == "automatique") {
         document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
-        form.type.innerHTML = `<option value="none">--Choose--</option>`;
+        form.type.innerHTML = `<option value="none">--Choose--</option>`;   
         aType.forEach(a => {
             form.type.innerHTML += `<option value="${a}">${a}</option>`;
         });
@@ -163,5 +163,5 @@ submit.addEventListener("click", (e) => {
     }
 
     // display the result.
-    window.alert(Math.round(result) + "$");
+    window.alert(result + "$");
 })
